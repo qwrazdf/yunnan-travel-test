@@ -3,818 +3,621 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>云南旅行攻略 - 合肥出发 | 昆明/大理/西双版纳5日游</title>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <title>云南7-9天深度游 - 昆明·大理·丽江·西双版纳（4月20日出发）</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: 'Noto Sans SC', sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            line-height: 1.75;
+            color: #2c3e50;
+            background: 
+                radial-gradient(ellipse at 15% 25%, rgba(255, 200, 80, 0.25) 0%, transparent 50%),
+                radial-gradient(ellipse at 85% 15%, rgba(80, 200, 180, 0.28) 0%, transparent 45%),
+                radial-gradient(ellipse at 55% 85%, rgba(255, 140, 100, 0.2) 0%, transparent 50%),
+                linear-gradient(180deg, #1a6f8a 0%, #2a9090 30%, #55a8a8 60%, #78b8a2 100%);
             min-height: 100vh;
             padding: 20px;
-            color: #333;
         }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        header {
-            text-align: center;
-            color: white;
-            margin-bottom: 40px;
-            padding: 40px 20px;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-        }
-
-        header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-
-        header p {
-            font-size: 1.2em;
-            opacity: 0.9;
-        }
-
-        .card {
-            background: white;
-            border-radius: 15px;
-            padding: 30px;
-            margin-bottom: 30px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-        }
-
-        .card h2 {
-            color: #667eea;
-            font-size: 1.8em;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 3px solid #667eea;
-        }
-
-        .highlight-box {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-            color: white;
-            padding: 25px;
-            border-radius: 10px;
-            margin: 20px 0;
-            box-shadow: 0 5px 15px rgba(240, 147, 251, 0.3);
-        }
-
-        .highlight-box h3 {
-            margin-bottom: 15px;
-            font-size: 1.3em;
-        }
-
-        .ticket-info {
-            background: #f8f9fa;
-            border-left: 4px solid #667eea;
-            padding: 15px 20px;
-            margin: 15px 0;
-            border-radius: 5px;
-        }
-
-        .ticket-info strong {
-            color: #667eea;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 12px 30px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            text-decoration: none;
-            border-radius: 25px;
-            font-weight: 500;
-            margin: 5px;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
-        }
-
-        .btn-outline {
-            background: transparent;
-            border: 2px solid #667eea;
-            color: #667eea;
-        }
-
-        .btn-outline:hover {
-            background: #667eea;
-            color: white;
-        }
-
-        .grid-2 {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            margin: 20px 0;
-        }
-
-        .grid-3 {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin: 20px 0;
-        }
-
-        .mini-card {
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-        }
-
-        .mini-card h4 {
-            color: #333;
-            margin-bottom: 10px;
-        }
-
-        .price {
-            font-size: 1.5em;
-            font-weight: bold;
-            color: #f5576c;
-        }
-
-        .timeline {
-            position: relative;
-            padding-left: 30px;
-        }
-
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 10px;
-            top: 0;
-            bottom: 0;
-            width: 3px;
-            background: #667eea;
-        }
-
-        .timeline-item {
-            margin-bottom: 25px;
-            position: relative;
-        }
-
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -24px;
-            top: 5px;
-            width: 12px;
-            height: 12px;
-            background: #667eea;
-            border-radius: 50%;
-            border: 3px solid white;
-        }
-
-        .timeline-item h4 {
-            color: #667eea;
-            margin-bottom: 8px;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-            background: white;
-        }
-
-        table th, table td {
-            padding: 12px 15px;
-            text-align: left;
-            border-bottom: 1px solid #e0e0e0;
-        }
-
-        table th {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            font-weight: 500;
-        }
-
-        table tr:hover {
-            background: #f8f9fa;
-        }
-
-        .warning {
-            background: #fff3cd;
-            border-left: 4px solid #ffc107;
-            padding: 15px 20px;
-            margin: 15px 0;
-            border-radius: 5px;
-        }
-
-        .warning strong {
-            color: #856404;
-        }
-
-        .success {
-            background: #d4edda;
-            border-left: 4px solid #28a745;
-            padding: 15px 20px;
-            margin: 15px 0;
-            border-radius: 5px;
-        }
-
-        .success strong {
-            color: #155724;
-        }
-
-        .info {
-            background: #d1ecf1;
-            border-left: 4px solid #17a2b8;
-            padding: 15px 20px;
-            margin: 15px 0;
-            border-radius: 5px;
-        }
-
-        .info strong {
-            color: #0c5460;
-        }
-
-        footer {
-            text-align: center;
-            color: white;
-            padding: 20px;
-            margin-top: 40px;
-            opacity: 0.9;
-        }
-
-        .airline-logo {
-            width: 150px;
-            height: 80px;
-            background: #f8f9fa;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 10px auto;
-            font-weight: bold;
-            color: #667eea;
-        }
-
-        .tab-container {
-            display: flex;
-            margin-bottom: 20px;
-            border-bottom: 2px solid #e0e0e0;
-        }
-
-        .tab-btn {
-            padding: 10px 25px;
-            background: none;
-            border: none;
-            font-size: 16px;
-            cursor: pointer;
-            color: #666;
-            position: relative;
-            transition: color 0.3s;
-        }
-
-        .tab-btn.active {
-            color: #667eea;
-            font-weight: bold;
-        }
-
-        .tab-btn.active::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            right: 0;
-            height: 2px;
-            background: #667eea;
-        }
-
-        .tab-content {
-            display: none;
-        }
-
-        .tab-content.active {
+        .container { max-width: 1100px; margin: 0 auto; }
+        .header { text-align: center; color: white; padding: 50px 20px 40px; margin-bottom: 30px; position: relative; }
+        .header::before {
+            content: '🌴 ☀️ 🌺 🌿 🏔️ 🌊 🍃 🦚 🌞 🌴';
             display: block;
+            font-size: 2em;
+            margin-bottom: 18px;
+            letter-spacing: 12px;
+            animation: float 6s ease-in-out infinite;
         }
-
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 1.8em;
-            }
-
-            .card {
-                padding: 20px;
-            }
-
-            .grid-2, .grid-3 {
-                grid-template-columns: 1fr;
-            }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
         }
+        .header::after {
+            content: '';
+            display: block;
+            width: 80px; height: 4px;
+            background: linear-gradient(90deg, #ffd54f, #ff8a65, #4db6ac);
+            border-radius: 2px;
+            margin: 20px auto 0;
+        }
+        .header h1 { font-size: 2.4em; margin-bottom: 12px; text-shadow: 2px 4px 16px rgba(0,80,80,0.5); letter-spacing: 2px; }
+        .header .subtitle { font-size: 1.05em; opacity: 0.95; margin-bottom: 8px; }
+        .header .tags { margin-top: 15px; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
+        .tag-pill { background: linear-gradient(135deg, rgba(255,255,255,0.22), rgba(255,255,255,0.1)); backdrop-filter: blur(10px); padding: 6px 18px; border-radius: 20px; font-size: 0.85em; border: 1px solid rgba(255,255,255,0.3); box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .card { background: white; border-radius: 18px; padding: 32px; margin-bottom: 28px; box-shadow: 0 10px 50px rgba(0,0,0,0.15); position: relative; }
+        .card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; border-radius: 18px 18px 0 0; }
+        .card-blue::before { background: linear-gradient(90deg, #2196f3, #667eea); }
+        .card-green::before { background: linear-gradient(90deg, #4caf50, #81c784); }
+        .card-orange::before { background: linear-gradient(90deg, #ff9800, #ffb74d); }
+        .card-purple::before { background: linear-gradient(90deg, #9c27b0, #ce93d8); }
+        .card-red::before { background: linear-gradient(90deg, #e94560, #ff6b6b); }
+        .card h2 { font-size: 1.35em; margin-bottom: 22px; color: #1a1a2e; display: flex; align-items: center; gap: 10px; }
+        .card h3 { font-size: 1.1em; margin: 25px 0 14px; color: #1a1a2e; border-left: 4px solid #e94560; padding-left: 14px; }
+        .icon { font-size: 1.2em; }
+        .summary-bar { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 14px; margin: 20px 0; }
+        .summary-item { text-align: center; padding: 18px 12px; background: #f8f9fa; border-radius: 12px; transition: transform 0.2s; }
+        .summary-item:hover { transform: translateY(-3px); }
+        .summary-item .val { font-size: 1.5em; font-weight: 800; color: #e94560; }
+        .summary-item .label { font-size: 0.8em; color: #999; margin-top: 4px; }
+        .route-flow { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 6px; margin: 25px 0; padding: 20px; background: linear-gradient(135deg, #f0f4ff, #e8f0fe); border-radius: 14px; }
+        .route-node { text-align: center; min-width: 65px; }
+        .route-node .emoji { font-size: 1.5em; }
+        .route-node .city { font-weight: 700; font-size: 0.9em; color: #1a1a2e; }
+        .route-node .days { font-size: 0.72em; color: #888; }
+        .route-arrow { color: #667eea; font-size: 1.1em; font-weight: bold; padding: 0 2px; }
+        .route-transport { font-size: 0.65em; color: #667eea; display: block; }
+        .highlight-box { padding: 18px 22px; border-radius: 12px; margin-bottom: 20px; color: white; }
+        .hl-blue { background: linear-gradient(135deg, #2196f3, #667eea); }
+        .hl-green { background: linear-gradient(135deg, #43a047, #66bb6a); }
+        .hl-red { background: linear-gradient(135deg, #e94560, #ff6b6b); }
+        .hl-orange { background: linear-gradient(135deg, #ef6c00, #ffa726); }
+        .highlight-box h4 { margin-bottom: 8px; font-size: 1.05em; }
+        .day-card { border: 1px solid #eee; border-radius: 14px; padding: 20px; margin-bottom: 16px; transition: transform 0.2s, box-shadow 0.2s; }
+        .day-card:hover { transform: translateY(-2px); box-shadow: 0 6px 24px rgba(0,0,0,0.08); }
+        .day-header { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+        .day-badge { display: inline-flex; align-items: center; justify-content: center; min-width: 70px; padding: 6px 14px; border-radius: 25px; color: white; font-weight: 700; font-size: 0.85em; }
+        .day-title { font-weight: 700; color: #1a1a2e; font-size: 1.02em; }
+        .day-transport { color: #888; font-size: 0.85em; }
+        .day-content { color: #555; font-size: 0.9em; }
+        .day-tips { margin-top: 12px; padding: 8px 14px; border-radius: 8px; font-size: 0.83em; display: inline-block; }
+        .day-food { background: #fff8e1; color: #f57f17; }
+        .day-hotel { background: #e8f5e9; color: #2e7d32; }
+        .day-warn { background: #fce4ec; color: #c62828; }
+        .attr-card { border: 1px solid #e8e8e8; border-radius: 14px; padding: 20px; margin-bottom: 14px; background: #fafbfc; transition: all 0.2s; }
+        .attr-card:hover { border-color: #667eea; box-shadow: 0 4px 16px rgba(102,126,234,0.1); }
+        .attr-name { font-weight: 700; font-size: 1.05em; color: #1a1a2e; margin-bottom: 8px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+        .attr-tag { display: inline-block; padding: 2px 10px; border-radius: 20px; font-size: 0.72em; font-weight: 600; vertical-align: middle; }
+        .tag-hot { background: #ffebee; color: #c62828; }
+        .tag-nature { background: #e8f5e9; color: #2e7d32; }
+        .tag-culture { background: #f3e5f5; color: #6a1b9a; }
+        .tag-leisure { background: #fff3e0; color: #e65100; }
+        .tag-free { background: #e3f2fd; color: #1565c0; }
+        .attr-reason { color: #444; font-size: 0.9em; padding: 10px 14px; background: linear-gradient(135deg, #e8f5e9, #f1f8e9); border-radius: 8px; border-left: 3px solid #4caf50; margin: 10px 0; }
+        .attr-meta { font-size: 0.82em; color: #888; margin-top: 6px; }
+        .attr-meta span { margin-right: 12px; }
+        table { width: 100%; border-collapse: collapse; margin: 12px 0 20px; font-size: 0.88em; }
+        th { background: #f8f9fa; padding: 11px 14px; text-align: left; font-weight: 700; border-bottom: 2px solid #dee2e6; color: #555; }
+        td { padding: 11px 14px; border-bottom: 1px solid #f0f0f0; vertical-align: top; }
+        tr:hover td { background: #fafbfc; }
+        .price { color: #e94560; font-weight: 700; }
+        .recommend { background: #e8f5e9; color: #27ae60; padding: 2px 10px; border-radius: 6px; font-weight: 700; font-size: 0.85em; }
+        .tip-box { padding: 18px 22px; border-radius: 0 12px 12px 0; margin: 14px 0; border-left: 5px solid; }
+        .tip-warn { background: #fff3e0; border-left-color: #ff9800; }
+        .tip-safe { background: #ffebee; border-left-color: #f44336; }
+        .tip-green { background: #e8f5e9; border-left-color: #4caf50; }
+        .tip-blue { background: #e3f2fd; border-left-color: #2196f3; }
+        .tip-purple { background: #f3e5f5; border-left-color: #9c27b0; }
+        .tip-box h4 { margin-bottom: 10px; color: #333; }
+        .tip-box ul { margin-left: 22px; }
+        .tip-box li { margin-bottom: 7px; color: #555; }
+        .tip-box li strong { color: #333; }
+        .link-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; margin-top: 16px; }
+        .link-card { display: block; padding: 14px 16px; border-radius: 10px; text-decoration: none; color: white; font-weight: 500; font-size: 0.88em; transition: transform 0.2s, box-shadow 0.2s; }
+        .link-card:hover { transform: translateY(-2px); box-shadow: 0 4px 14px rgba(0,0,0,0.2); }
+        .lc-red { background: linear-gradient(135deg, #e94560, #ff6b6b); }
+        .lc-blue { background: linear-gradient(135deg, #2196f3, #42a5f5); }
+        .lc-green { background: linear-gradient(135deg, #43a047, #66bb6a); }
+        .lc-orange { background: linear-gradient(135deg, #ef6c00, #ffa726); }
+        .lc-purple { background: linear-gradient(135deg, #7b1fa2, #ab47bc); }
+        .lc-pink { background: linear-gradient(135deg, #e91e63, #f06292); }
+        .budget-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+        .toc { margin: 20px 0; padding: 20px; background: #f8f9fa; border-radius: 12px; }
+        .toc h4 { margin-bottom: 10px; color: #888; font-size: 0.9em; }
+        .toc a { color: #667eea; text-decoration: none; margin-right: 16px; font-size: 0.9em; }
+        .toc a:hover { text-decoration: underline; }
+        .note { font-size: 0.82em; color: #999; font-style: italic; }
+        .divider { height: 1px; background: #eee; margin: 25px 0; }
+        @media (max-width: 700px) { .budget-grid { grid-template-columns: 1fr; } }
+        body::before, body::after {
+            content: '';
+            position: fixed;
+            z-index: 0;
+            pointer-events: none;
+            border-radius: 50%;
+            opacity: 0.12;
+        }
+        body::before {
+            width: 500px; height: 500px;
+            background: radial-gradient(circle, #ffd54f, #ff8c42);
+            top: -150px; right: -120px;
+            animation: floatBg 12s ease-in-out infinite;
+        }
+        body::after {
+            width: 400px; height: 400px;
+            background: radial-gradient(circle, #4db6ac, #26a69a);
+            bottom: -80px; left: -80px;
+            animation: floatBg 10s ease-in-out infinite reverse;
+        }
+        @keyframes floatBg {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            33% { transform: translate(20px, 15px) scale(1.05); }
+            66% { transform: translate(-15px, 10px) scale(0.97); }
+        }
+        .card { position: relative; z-index: 1; }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>✈️ 云南旅行攻略</h1>
-            <p>昆明 / 大理 / 西双版纳 · 5日4晚 · 合肥出发</p>
-            <p style="margin-top: 10px; font-size: 0.9em;">3-4人同行 · 人均预算 ¥2000-3250</p>
-        </header>
+<div class="container">
 
-        <!-- 航空次卡介绍 -->
-        <div class="card">
-            <h2>🎫 什么是航空次卡？</h2>
-            <p>航空次卡是航空公司推出的<strong>预售机票券</strong>，用户以优惠价格提前购买，然后在指定时间内兑换具体航班。听起来很诱人，但<strong>有很多坑</strong>需要注意！</p>
-
-            <div class="highlight-box">
-                <h3>⚠️ 重要提醒：次卡避坑指南</h3>
-                <ul>
-                    <li><strong>不可退改：</strong>一旦兑换航班，通常<strong>不可改签、不可退票</strong></li>
-                    <li><strong>航班有限：</strong>次卡只能兑换<strong>特定航班</strong>，早晚班次为主</li>
-                    <li><strong>提前预订：</strong>需提前5-7天兑换，临时出行不适用</li>
-                    <li><strong>不含税费：</strong>次卡价格<strong>不含机场建设费和燃油附加费</strong></li>
-                    <li><strong>座位限制：</strong>每航班次卡座位有限（通常30-50个），热门日期可能无票</li>
-                </ul>
-            </div>
-
-            <div class="tab-container">
-                <button class="tab-btn active" onclick="showTab('sichuan')">四川航空次卡</button>
-                <button class="tab-btn" onclick="showTab('juneyao')">吉祥航空次卡</button>
-            </div>
-
-            <!-- 四川航空次卡 -->
-            <div id="sichuan" class="tab-content active">
-                <div class="grid-2">
-                    <div class="mini-card">
-                        <h4>四川航空</h4>
-                        <div class="airline-logo">川航</div>
-                        <p style="margin-top: 10px;">春夏次卡 299元起</p>
-                    </div>
-                    <div class="ticket-info">
-                        <h4>💳 产品详情</h4>
-                        <p><strong>价格：</strong>单程卡 299元 / 往返卡 798元起</p>
-                        <p><strong>适用：</strong>国内多条航线</p>
-                        <p><strong>规则：</strong>需提前5天兑换，不含税费</p>
-                        <p><strong>限制：</strong>兑换后不可改签退票</p>
-                    </div>
-                </div>
-
-                <div class="warning">
-                    <strong>⚠️ 真实案例：</strong>有用户在川航直播间买了299元次卡，预订时把目的地选反了（成都→重庆而不是重庆→成都），申请退票被拒，299元打了水漂！
-                </div>
-
-                <div class="success">
-                    <strong>✅ 适合人群：</strong>行程确定、不介意早晚班次、时间灵活的旅行者
-                </div>
-
-                <div class="grid-3">
-                    <a href="http://m.sichuanair.com/" target="_blank" class="btn">川航官网</a>
-                    <a href="https://www.douyin.com" target="_blank" class="btn">川航抖音</a>
-                    <a href="https://flights.ctrip.com/" target="_blank" class="btn btn-outline">携程购票</a>
-                </div>
-            </div>
-
-            <!-- 吉祥航空次卡 -->
-            <div id="juneyao" class="tab-content">
-                <div class="grid-2">
-                    <div class="mini-card">
-                        <h4>吉祥航空</h4>
-                        <div class="airline-logo">吉祥</div>
-                        <p style="margin-top: 10px;">寻芳山水飞卡 259元起</p>
-                    </div>
-                    <div class="ticket-info">
-                        <h4>💳 产品详情</h4>
-                        <p><strong>价格：</strong>单程卡 259元起 / 往返卡 500元起</p>
-                        <p><strong>适用：</strong>上海、杭州、无锡等出发地</p>
-                        <p><strong>规则：</strong>需提前兑换，不含税费</p>
-                        <p><strong>限制：</strong>每航班仅限30个次卡座位</p>
-                    </div>
-                </div>
-
-                <div class="warning">
-                    <strong>⚠️ 注意事项：</strong>吉祥次卡在节假日、旺季时可用航班较少，曾有用户连续3天查询无票可兑。
-                </div>
-
-                <div class="info">
-                    <strong>💡 购买建议：</strong>购买前先在平台上比价，如果没有便宜票再考虑次卡。建议先模拟查询心仪航线的可兑换情况。
-                </div>
-
-                <div class="grid-3">
-                    <a href="https://www.juneyaoair.com/" target="_blank" class="btn">吉祥官网</a>
-                    <a href="https://www.douyin.com" target="_blank" class="btn">吉祥抖音</a>
-                    <a href="https://flights.ctrip.com/" target="_blank" class="btn btn-outline">携程购票</a>
-                </div>
-            </div>
+    <!-- ==================== HEADER ==================== -->
+    <div class="header">
+        <h1>🌴😎🍻 云南7-9天深度游规划</h1>
+        <p class="subtitle" style="font-size:1.05em;opacity:0.85;margin-bottom:12px;">昆明 → 大理 → 丽江 → 西双版纳 · 4月20日出发</p>
+        <div style="background:linear-gradient(135deg,rgba(255,255,255,0.18),rgba(255,255,255,0.08));border:1px solid rgba(255,255,255,0.3);border-radius:18px;padding:18px 28px;margin:12px auto 18px;max-width:620px;font-size:0.95em;color:rgba(255,255,255,0.97);line-height:2;backdrop-filter:blur(12px);box-shadow:0 4px 24px rgba(0,0,0,0.12);">
+            🗺️ 从洱海的风到玉龙雪山的雪，从星光夜市的烟火气到热带雨林的奇遇<br>
+            🌈 <strong>这是一场说走就走的青春旅行，5个人，一起疯，一起嗨！</strong><br>
+            ☀️ 4月的云南刚刚好——花正开、天正蓝，等你来！
         </div>
-
-        <!-- 特价机票攻略 -->
-        <div class="card">
-            <h2>🎯 特价机票购买攻略</h2>
-
-            <div class="highlight-box">
-                <h3>🔥 合肥→昆明 200元特价票攻略</h3>
-                <p><strong>确认存在！</strong>抖音直播间确实有200多元的特价机票，主要通过以下渠道：</p>
-            </div>
-
-            <h3>1️⃣ 春秋航空（最推荐）</h3>
-            <div class="ticket-info">
-                <p><strong>会员日：</strong><span style="font-size: 1.2em; color: #f5576c;">每月27日 0点开始</span></p>
-                <p><strong>价格区间：</strong>¥200-500（单程）</p>
-                <p><strong>航班：</strong>合肥新桥机场 → 昆明长水机场</p>
-                <p><strong>特点：</strong>不含托运行李额（仅7KG随身携带）</p>
-            </div>
-            <p><strong>抢票技巧：</strong>提前在春秋APP注册会员，绑定支付方式，27日0点准时进入直播间/APP抢购。</p>
-
-            <h3>2️⃣ 东方航空（安徽分公司）</h3>
-            <div class="ticket-info">
-                <p><strong>会员日：</strong><span style="font-size: 1.2em; color: #f5576c;">每月18日</span></p>
-                <p><strong>抖音直播间：</strong>搜索"安徽东航"官方号</p>
-                <p><strong>价格：</strong>¥300-600（单程）</p>
-                <p><strong>优势：</strong>航班较多，时间选择丰富</p>
-            </div>
-
-            <h3>3️⃣ 抖音直播间购票避坑指南</h3>
-            <table>
-                <thead>
-                    <tr>
-                        <th>✅ 靠谱渠道</th>
-                        <th>❌ 高风险</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>春秋航空官方直播间</td>
-                        <td>个人账号</td>
-                    </tr>
-                    <tr>
-                        <td>东航、吉祥等航司直播间</td>
-                        <td>非旅行社认证账号</td>
-                    </tr>
-                    <tr>
-                        <td>携程、飞猪等大平台直播间</td>
-                        <td>"超低价团"（可能为旅行团捆绑）</td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <div class="warning">
-                <strong>⚠️ 购买前确认：</strong>
-                <ul>
-                    <li>是否为官方认证账号</li>
-                    <li>退改签政策（特价票通常不可退）</li>
-                    <li>航班时间、航司、起降机场</li>
-                    <li>截图保存订单详情和沟通记录</li>
-                </ul>
-            </div>
-
-            <div class="grid-3">
-                <a href="https://www.ch.com/" target="_blank" class="btn">春秋官网</a>
-                <a href="https://www.douyin.com" target="_blank" class="btn">抖音搜索</a>
-                <a href="https://www.fliggy.com/jipiao/" target="_blank" class="btn btn-outline">飞猪购票</a>
-            </div>
+        <div class="tags">
+            <span class="tag-pill">✈️ 航空次卡已购</span>
+            <span class="tag-pill">👥 5人学生团</span>
+            <span class="tag-pill">📅 4.20-4.28</span>
+            <span class="tag-pill">💰 追求性价比</span>
         </div>
-
-        <!-- 机票价格参考 -->
-        <div class="card">
-            <h2>📊 机票价格参考（2026年4月）</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>出行时间</th>
-                        <th>航空公司</th>
-                        <th>价格区间</th>
-                        <th>备注</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>平日（周一至周四）</td>
-                        <td>春秋/东航/南航</td>
-                        <td>¥400-700</td>
-                        <td>价格较低</td>
-                    </tr>
-                    <tr>
-                        <td>周末</td>
-                        <td>各航司</td>
-                        <td>¥600-900</td>
-                        <td>周末略贵</td>
-                    </tr>
-                    <tr>
-                        <td>4月初（清明前）</td>
-                        <td>春秋</td>
-                        <td>¥300-500</td>
-                        <td>错峰出行最佳</td>
-                    </tr>
-                    <tr>
-                        <td>4月底（五一前）</td>
-                        <td>各航司</td>
-                        <td>¥500-800</td>
-                        <td>需提前预订</td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <div class="success">
-                <strong>💡 最佳购票时间建议：</strong>
-                <ul>
-                    <li>如果能等到<strong>4月27日春秋会员日</strong>，可蹲守200-400元特价票</li>
-                    <li>平时关注春秋/东航抖音直播间，经常有临时秒杀</li>
-                    <li>提前15-30天预订，价格相对稳定</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- 省内交通 -->
-        <div class="card">
-            <h2>🚄 云南省内交通</h2>
-
-            <div class="grid-3">
-                <div class="mini-card">
-                    <h4>昆明→大理</h4>
-                    <p>时间：2-2.5小时</p>
-                    <p>价格：<span class="price">¥150-200</span></p>
-                    <p>车次：每日10+趟</p>
-                </div>
-                <div class="mini-card">
-                    <h4>大理→昆明</h4>
-                    <p>时间：2-2.5小时</p>
-                    <p>价格：<span class="price">¥150-200</span></p>
-                    <p>车次：每日10+趟</p>
-                </div>
-                <div class="mini-card">
-                    <h4>昆明→西双版纳</h4>
-                    <p>时间：3.5小时</p>
-                    <p>价格：<span class="price">¥200-250</span></p>
-                    <p>车次：每日5-8趟</p>
-                </div>
-            </div>
-
-            <p style="margin-top: 20px;"><strong>省内交通总预算：</strong>约¥500-650（往返高铁）</p>
-
-            <div class="grid-2">
-                <a href="https://www.12306.cn/" target="_blank" class="btn">12306官网</a>
-                <a href="https://trains.ctrip.com/" target="_blank" class="btn btn-outline">携程购票</a>
-            </div>
-        </div>
-
-        <!-- 行程安排 -->
-        <div class="card">
-            <h2>🗓️ 5天4晚行程安排</h2>
-
-            <div class="timeline">
-                <div class="timeline-item">
-                    <h4>Day 1：合肥→昆明</h4>
-                    <p><strong>上午：</strong>合肥新桥机场出发（建议选早班机）</p>
-                    <p><strong>中午：</strong>抵达昆明长水机场，前往市区（地铁/打车约1小时）</p>
-                    <p><strong>下午：</strong>滇池海埂大坝、云南民族村</p>
-                    <p><strong>晚上：</strong>南屏步行街品尝云南小吃（过桥米线、汽锅鸡）</p>
-                    <p><strong>住宿：</strong>昆明市区（昆明站附近，方便第二天出行）</p>
-                </div>
-
-                <div class="timeline-item">
-                    <h4>Day 2：昆明→大理</h4>
-                    <p><strong>上午：</strong>高铁昆明→大理（2.5小时）</p>
-                    <p><strong>中午：</strong>大理古城午餐</p>
-                    <p><strong>下午：</strong>大理古城、崇圣寺三塔</p>
-                    <p><strong>傍晚：</strong>洱海边散步（龙龛码头/才村码头）</p>
-                    <p><strong>晚上：</strong>古城夜景、白族酒吧</p>
-                    <p><strong>住宿：</strong>大理古城附近</p>
-                </div>
-
-                <div class="timeline-item">
-                    <h4>Day 3：大理环洱海</h4>
-                    <p><strong>全天：</strong>环洱海一日游（建议包车/租电动车）</p>
-                    <ul style="margin-left: 20px; margin-top: 10px;">
-                        <li>喜洲古镇（白族民居、严家大院）</li>
-                        <li>双廊古镇（海景咖啡馆）</li>
-                        <li>小普陀（洱海最佳观景点）</li>
-                        <li>挖色村（艺术村落）</li>
-                    </ul>
-                    <p><strong>晚上：</strong>古城晚餐（野生菌火锅）</p>
-                    <p><strong>住宿：</strong>大理古城附近</p>
-                </div>
-
-                <div class="timeline-item">
-                    <h4>Day 4：大理→昆明→西双版纳</h4>
-                    <p><strong>上午：</strong>高铁大理→昆明（2.5小时）</p>
-                    <p><strong>中午：</strong>昆明站简餐</p>
-                    <p><strong>下午：</strong>高铁昆明→西双版纳（3.5小时）</p>
-                    <p><strong>晚上：</strong>西双版纳告庄西双景（星光夜市）</p>
-                    <p><strong>住宿：</strong>告庄区域</p>
-                </div>
-
-                <div class="timeline-item">
-                    <h4>Day 5：西双版纳→合肥</h4>
-                    <p><strong>上午：</strong>西双版纳热带植物园（中科院植物园）</p>
-                    <p><strong>中午：</strong>傣族美食（孔雀宴、烤鸡）</p>
-                    <p><strong>下午：</strong>前往西双版纳嘎洒机场</p>
-                    <p><strong>晚上：</strong>飞回合肥（经停昆明或直飞）</p>
-                </div>
-            </div>
-
-            <div class="info">
-                <strong>💡 紧凑版（4天3晚）：</strong>如果时间有限，建议选择昆明+大理（不去西双版纳），第4天高铁回昆明，傍晚航班返回合肥。
-            </div>
-        </div>
-
-        <!-- 天气和穿搭 -->
-        <div class="card">
-            <h2>🌤️ 天气与穿搭建议</h2>
-
-            <div class="grid-3">
-                <div class="mini-card">
-                    <h4>昆明</h4>
-                    <p>12-24℃</p>
-                    <p>昼夜温差大<br>晴天为主</p>
-                </div>
-                <div class="mini-card">
-                    <h4>大理</h4>
-                    <p>10-23℃</p>
-                    <p>早晚较凉<br>日照强烈</p>
-                </div>
-                <div class="mini-card">
-                    <h4>西双版纳</h4>
-                    <p>18-30℃</p>
-                    <p>热带气候<br>炎热潮湿</p>
-                </div>
-            </div>
-
-            <h3 style="margin-top: 25px;">穿搭建议：</h3>
-            <table>
-                <thead>
-                    <tr>
-                        <th>地区</th>
-                        <th>穿衣建议</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>昆明/大理</td>
-                        <td>长袖+薄外套+运动鞋（早晚温差大）</td>
-                    </tr>
-                    <tr>
-                        <td>西双版纳</td>
-                        <td>短袖+防晒衣+凉鞋/拖鞋</td>
-                    </tr>
-                    <tr>
-                        <td>通用</td>
-                        <td>防晒霜、墨镜、遮阳帽（紫外线强）</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <!-- 预算估算 -->
-        <div class="card">
-            <h2>💰 总预算（经济型，3-4人）</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>项目</th>
-                        <th>费用（人均）</th>
-                        <th>说明</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>往返机票</td>
-                        <td><span class="price">¥400-900</span></td>
-                        <td>合肥-昆明往返，特价票可做到400元内</td>
-                    </tr>
-                    <tr>
-                        <td>省内交通</td>
-                        <td>¥500-650</td>
-                        <td>高铁往返（昆明-大理-版纳）</td>
-                    </tr>
-                    <tr>
-                        <td>住宿</td>
-                        <td>¥400-600</td>
-                        <td>4晚，¥100-150/晚/人（快捷酒店/民宿）</td>
-                    </tr>
-                    <tr>
-                        <td>门票</td>
-                        <td>¥200-300</td>
-                        <td>洱海、植物园等景点</td>
-                    </tr>
-                    <tr>
-                        <td>餐饮</td>
-                        <td>¥400-600</td>
-                        <td>5天，¥80-120/天/人</td>
-                    </tr>
-                    <tr>
-                        <td>其他</td>
-                        <td>¥100-200</td>
-                        <td>市内交通、小商品</td>
-                    </tr>
-                    <tr style="background: linear-gradient(135deg, #667eea20 0%, #764ba220 100%);">
-                        <td><strong>总计</strong></td>
-                        <td><strong><span class="price" style="font-size: 1.3em;">¥2000-3250</span></strong></td>
-                        <td><strong>取决于机票价格</strong></td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <h3 style="margin-top: 25px;">💡 省钱技巧：</h3>
-            <ol style="margin-left: 20px; line-height: 2;">
-                <li>✅ 蹲守春秋/东航会员日和直播间特价票（可省400-600元）</li>
-                <li>✅ 选择4月初错峰出行（避开清明、五一）</li>
-                <li>✅ 提前15天预订高铁票</li>
-                <li>✅ 淡季入住民宿/青旅（多人拼房更划算）</li>
-            </ol>
-        </div>
-
-        <!-- 重要注意事项 -->
-        <div class="card">
-            <h2>⚠️ 重要注意事项</h2>
-
-            <h3>1. 购票避坑</h3>
-            <ul style="margin-left: 20px; margin-bottom: 20px; line-height: 2;">
-                <li>抖音直播间购买特价票时，<strong>务必确认是官方账号</strong>（春秋航空、东航等）</li>
-                <li>特价票通常<strong>不可退改</strong>，购买前确认行程无误</li>
-                <li>注意航班<strong>起降机场</strong>（昆明长水机场 vs 昆明站）</li>
-            </ul>
-
-            <h3>2. 省内交通</h3>
-            <ul style="margin-left: 20px; margin-bottom: 20px; line-height: 2;">
-                <li>高铁票建议提前15天在12306预订</li>
-                <li>4月是旅游旺季，热门车次票可能紧张</li>
-            </ul>
-
-            <h3>3. 住宿</h3>
-            <ul style="margin-left: 20px; margin-bottom: 20px; line-height: 2;">
-                <li>大理古城、西双版纳告庄区域住宿较贵，提前预订</li>
-                <li>周末价格比周一至周四贵30%-50%</li>
-            </ul>
-
-            <h3>4. 天气</h3>
-            <ul style="margin-left: 20px; margin-bottom: 20px; line-height: 2;">
-                <li>云南紫外线强，必须做好防晒</li>
-                <li>昼夜温差大，带件薄外套</li>
-                <li>西双版纳炎热潮湿，注意防蚊</li>
-            </ul>
-
-            <h3>5. 其他</h3>
-            <ul style="margin-left: 20px; line-height: 2;">
-                <li>带上学生证（部分景点可优惠）</li>
-                <li>提前下载12306、飞猪、携程APP</li>
-                <li>准备少量现金（偏远地区可能不能用手机支付）</li>
-            </ul>
-        </div>
-
-        <!-- 购票链接汇总 -->
-        <div class="card">
-            <h2>🔗 购票链接汇总</h2>
-
-            <h3>航空公司官网</h3>
-            <div class="grid-2">
-                <a href="https://www.ch.com/" target="_blank" class="btn">春秋航空</a>
-                <a href="http://m.sichuanair.com/" target="_blank" class="btn">四川航空</a>
-                <a href="https://www.juneyaoair.com/" target="_blank" class="btn">吉祥航空</a>
-                <a href="https://www.douyin.com" target="_blank" class="btn">抖音直播间</a>
-            </div>
-
-            <h3 style="margin-top: 25px;">第三方平台</h3>
-            <div class="grid-2">
-                <a href="https://flights.ctrip.com/" target="_blank" class="btn">携程机票</a>
-                <a href="https://www.fliggy.com/jipiao/" target="_blank" class="btn">飞猪机票</a>
-                <a href="https://flight.qunar.com/" target="_blank" class="btn">去哪儿机票</a>
-                <a href="https://www.12306.cn/" target="_blank" class="btn">12306高铁</a>
-            </div>
-        </div>
-
-        <footer>
-            <p>🌈 祝你们旅途愉快！</p>
-            <p style="margin-top: 10px; font-size: 0.8em;">生成时间：2026年3月29日 | 数据来源：抖音、小红书、携程、去哪儿、春秋航空官网等</p>
-        </footer>
     </div>
 
-    <script>
-        function showTab(tabId) {
-            // Hide all tab contents
-            const tabContents = document.querySelectorAll('.tab-content');
-            tabContents.forEach(content => {
-                content.classList.remove('active');
-            });
+    <!-- 快速导航 -->
+    <div class="card card-blue">
+        <div class="toc">
+            <h4>📑 快速导航</h4>
+            <a href="#overview">📊 行程概览</a>
+            <a href="#itinerary">📅 详细行程</a>
+            <a href="#attractions">🎯 景点推荐</a>
+            <a href="#flight">💰 回程机票</a>
+            <a href="#budget">💵 费用预算</a>
+            <a href="#tips">⚠️ 出行注意</a>
+            <a href="#links">🔗 攻略链接</a>
+        </div>
+    </div>
 
-            // Remove active class from all tab buttons
-            const tabBtns = document.querySelectorAll('.tab-btn');
-            tabBtns.forEach(btn => {
-                btn.classList.remove('active');
-            });
+    <!-- ==================== 行程概览 ==================== -->
+    <div class="card card-blue" id="overview">
+        <h2><span class="icon">📊</span> 行程概览</h2>
+        <div class="summary-bar">
+            <div class="summary-item"><div class="val">7-9天</div><div class="label">📅 游玩天数</div></div>
+            <div class="summary-item"><div class="val">4城</div><div class="label">🗺️ 目的地</div></div>
+            <div class="summary-item"><div class="val">5人</div><div class="label">👥 出行人数</div></div>
+            <div class="summary-item"><div class="val">¥3-5k</div><div class="label">💰 总预算/人</div></div>
+            <div class="summary-item"><div class="val">15℃+</div><div class="label">🌤️ 4月均温</div></div>
+        </div>
+        <div class="highlight-box hl-blue">
+            <h4>🎯 推荐路线：昆明（半日）→ 大理（2天）→ 丽江（2天）→ 西双版纳（2-3天）→ 返程</h4>
+            <p style="font-size:0.9em;opacity:0.95;">由北向南，海拔从2240m逐步降至520m，身体适应更好！不走回头路，全程约900km</p>
+        </div>
+        <div class="route-flow">
+            <div class="route-node"><div class="emoji">🏠</div><div class="city">合肥</div><div class="days">出发✈️</div></div>
+            <div class="route-arrow"><span class="route-transport">次卡/高铁</span>→</div>
+            <div class="route-node"><div class="emoji">🌆</div><div class="city">昆明</div><div class="days">中转半天</div></div>
+            <div class="route-arrow"><span class="route-transport">高铁2h10m</span>→</div>
+            <div class="route-node"><div class="emoji">🌊</div><div class="city">大理</div><div class="days">2天</div></div>
+            <div class="route-arrow"><span class="route-transport">城铁1.5h</span>→</div>
+            <div class="route-node"><div class="emoji">⛰️</div><div class="city">丽江</div><div class="days">2天</div></div>
+            <div class="route-arrow"><span class="route-transport">直飞55m</span>→</div>
+            <div class="route-node"><div class="emoji">🌴</div><div class="city">西双版纳</div><div class="days">2-3天</div></div>
+            <div class="route-arrow"><span class="route-transport">飞回✈️</span>→</div>
+            <div class="route-node"><div class="emoji">🏠</div><div class="city">合肥</div><div class="days">返程</div></div>
+        </div>
+        <p class="note">💡 说明：出发票（航空次卡）已购买，回程建议从西双版纳直飞合肥最省钱（详见「回程机票」板块）</p>
+    </div>
 
-            // Show selected tab content
-            document.getElementById(tabId).classList.add('active');
+    <!-- ==================== 详细行程 ==================== -->
+    <div class="card card-green" id="itinerary">
+        <h2><span class="icon">📅</span> 7-9天详细行程安排</h2>
 
-            // Add active class to clicked button
-            event.target.classList.add('active');
-        }
-    </script>
+        <div class="day-card">
+            <div class="day-header">
+                <div class="day-badge" style="background:linear-gradient(135deg,#ff9800,#ffb74d);">Day 1</div>
+                <div><div class="day-title">4月20日 · 出发 + 昆明半日游 + 前往大理</div><div class="day-transport">🚄 高铁 / ✈️ 次卡航班 → 昆明 → 高铁2h10m → 大理</div></div>
+            </div>
+            <div class="day-content">
+                <p>上午从合肥出发，使用航空次卡飞昆明或乘坐高铁。下午抵达后简单游览昆明：<strong>翠湖公园</strong>（免费，春季花正开）或<strong>滇池</strong>（免费，看海鸥，4月可能还有少量红嘴鸥）。傍晚乘高铁前往大理（¥145），入住大理古城周边民宿。</p>
+                <p style="margin-top:8px;">🍽️ 晚上在大理古城吃：凉鸡米线、饵丝、烤乳扇</p>
+            </div>
+            <div class="day-tips day-hotel">🏨 住宿：大理古城/才村附近（人均¥60-120/晚）</div>
+        </div>
+
+        <div class="day-card">
+            <div class="day-header">
+                <div class="day-badge" style="background:linear-gradient(135deg,#4caf50,#81c784);">Day 2</div>
+                <div><div class="day-title">4月21日 · 大理 · 环洱海一日</div><div class="day-transport">🚲 租电动车/自行车环洱海西线</div></div>
+            </div>
+            <div class="day-content">
+                <p>全天环洱海！租电动车（¥30-50/天）从<strong>才村码头</strong>出发 → 沿生态廊道骑行 → <strong>S弯</strong>（网红打卡）→ <strong>廊桥</strong>（拍照圣地）→ <strong>喜洲古镇</strong>（吃喜洲粑粑、看白族建筑）→ <strong>双廊古镇</strong>（杨丽萍太阳宫/月亮宫，洱海边咖啡发呆）→ 傍晚回古城。</p>
+                <p style="margin-top:8px;">📸 穿白色/浅色长裙拍照效果极佳！环海全程约130km，电动车可走西线精华段（约60km）。</p>
+            </div>
+            <div class="day-tips day-food">🍜 必吃：喜洲粑粑（¥10）、凉鸡米线（¥12）、包浆豆腐（¥5）、烤乳扇（¥5）</div>
+        </div>
+
+        <div class="day-card">
+            <div class="day-header">
+                <div class="day-badge" style="background:linear-gradient(135deg,#4caf50,#81c784);">Day 3</div>
+                <div><div class="day-title">4月22日 · 大理 → 丽江</div><div class="day-transport">⛰️ 上午苍山/三塔 → 🚄 城铁1.5h → 丽江古城</div></div>
+            </div>
+            <div class="day-content">
+                <p>上午二选一：<strong>苍山感通索道</strong>（¥110，俯瞰洱海全景）或<strong>崇圣寺三塔</strong>（¥75，学生¥37，大理地标拍倒影）。中午退房，乘城际列车前往丽江（¥80，<strong>选A/F靠窗座可看洱海风景</strong>）。下午入住丽江古城，逛<strong>四方街</strong>、<strong>大水车</strong>，晚上吃<strong>腊排骨火锅</strong>（人均¥40-60）。</p>
+            </div>
+            <div class="day-tips day-hotel">🏨 住宿：丽江古城五一街/狮子山（人均¥70-130/晚，避开酒吧街选安静区域）</div>
+        </div>
+
+        <div class="day-card">
+            <div class="day-header">
+                <div class="day-badge" style="background:linear-gradient(135deg,#e91e63,#f06292);">Day 4</div>
+                <div><div class="day-title">4月23日 · 丽江 · 玉龙雪山一日</div><div class="day-transport">🚐 包车/拼车 → 玉龙雪山（距古城30km）</div></div>
+            </div>
+            <div class="day-content">
+                <p><strong>⚠️ 提前3天在「丽江玉龙雪山」小程序抢大索道票！</strong>早上7点出发，乘大索道直达<strong>冰川公园4506m</strong>（¥140），量力徒步至<strong>4680m观景台</strong>。中午下山游览<strong>蓝月谷</strong>（含在雪山门票内，湖水碧绿如宝石），可坐电瓶车（¥20）。下午回古城休息。</p>
+                <p style="margin-top:8px;">🏔️ <strong>高原反应预防：</strong>提前3天喝红景天/吃高原安；上山前买氧气瓶（景区¥15/瓶）；别跑跳，慢慢走！</p>
+            </div>
+            <div class="day-tips day-warn">⚠️ 必备：羽绒服/冲锋衣（山顶-5~5℃）、墨镜（雪反射强）、防晒霜、巧克力/士力架</div>
+        </div>
+
+        <div class="day-card">
+            <div class="day-header">
+                <div class="day-badge" style="background:linear-gradient(135deg,#e91e63,#f06292);">Day 5</div>
+                <div><div class="day-title">4月24日 · 丽江 · 古城深度游</div><div class="day-transport">🚶 步行 / 🚲 骑车</div></div>
+            </div>
+            <div class="day-content">
+                <p>早上睡到自然醒，8-9点逛<strong>丽江古城</strong>（清晨最安静，拍照人少）。游览<strong>木府</strong>（¥40，了解纳西族历史）→ <strong>狮子山万古楼</strong>（¥15，俯瞰古城全景）。下午二选一：去<strong>束河古镇</strong>（免费，更安静古朴，茶马古道博物馆）或<strong>白沙古镇</strong>（免费，纳西壁画¥30，远眺雪山最佳位置）。晚上古城酒吧街听听歌。</p>
+            </div>
+            <div class="day-tips day-food">🍜 必吃：腊排骨火锅、黑山羊火锅、鸡豆凉粉（¥8）、纳西烤鱼</div>
+        </div>
+
+        <div class="day-card">
+            <div class="day-header">
+                <div class="day-badge" style="background:linear-gradient(135deg,#7b1fa2,#ab47bc);">Day 6</div>
+                <div><div class="day-title">4月25日 · 丽江 ✈️ 西双版纳</div><div class="day-transport">✈️ 直飞55分钟（¥350-480/人）→ 告庄星光夜市</div></div>
+            </div>
+            <div class="day-content">
+                <p>上午在丽江悠闲吃个早餐，乘坐早班机丽江→西双版纳景洪（直飞55分钟，比绕昆明节省7小时！）。下午入住<strong>告庄西双景</strong>附近酒店。傍晚逛<strong>星光夜市</strong>（免费，东南亚最大夜市之一），大金塔夜景超美！可以租傣装旅拍（¥50-200含妆造），吃傣族烧烤、手抓饭。</p>
+                <p style="margin-top:8px;">🌡️ 从丽江20℃到版纳35℃，<strong>直接进入夏天</strong>！到达后换上夏装。</p>
+            </div>
+            <div class="day-tips day-hotel">🏨 住宿：告庄西双景/泼水广场附近（人均¥80-150/晚，离夜市近）</div>
+        </div>
+
+        <div class="day-card">
+            <div class="day-header">
+                <div class="day-badge" style="background:linear-gradient(135deg,#7b1fa2,#ab47bc);">Day 7-9</div>
+                <div><div class="day-title">4月26-28日 · 西双版纳深度游 + 返程</div><div class="day-transport">🌴 热带雨林 + 傣族文化 + ✈️ 返程</div></div>
+            </div>
+            <div class="day-content">
+                <p><strong>Day 7：</strong>上午<strong>原始森林公园</strong>（¥45，孔雀放飞壮观🦚）→ 下午<strong>野象谷</strong>（¥60，国内唯一可观野生亚洲象🐘）</p>
+                <p style="margin-top:6px;"><strong>Day 8：</strong>全天<strong>中科院热带植物园</strong>（¥80，勐仑镇，上万种奇花异草🌺，建议包车前往）+ 傣族园泼水狂欢（¥50）</p>
+                <p style="margin-top:6px;"><strong>Day 9：</strong>上午<strong>总佛寺</strong>（免费）+ <strong>曼听公园</strong>（¥40）祈福 → 告庄买热带水果（芒果、榴莲便宜）→ 下午乘飞机<strong>西双版纳→合肥</strong>（预留2h到机场）</p>
+            </div>
+            <div class="day-tips day-food">🍜 必吃：傣族手抓饭（¥30-50/人）、香茅草烤鱼（¥25）、菠萝饭（¥18）、热带水果（芒果¥3/斤）</div>
+        </div>
+    </div>
+
+    <!-- ==================== 景点推荐 ==================== -->
+    <div class="card card-orange" id="attractions">
+        <h2><span class="icon">🎯</span> 各城市必玩景点推荐 & 推荐理由</h2>
+
+        <h3>🌊 大理 · Dali（建议2天）</h3>
+        <p style="color:#888;font-size:0.85em;margin-bottom:14px;">🌤️ 4月气温 8~25°C | 🏔️ 海拔 1972m | 💡 紫外线强，带防晒</p>
+
+        <div class="attr-card">
+            <div class="attr-name">1. 洱海生态廊道骑行 <span class="attr-tag tag-hot">🔥 强烈推荐</span></div>
+            <div class="attr-reason">💡 大理的"灵魂之海"！4月洱海水清天蓝，沿途S弯、廊桥、夫妻树都是出片点。骑电动车从才村到双廊，一路风景如画，比包车更有旅行感。租辆小电驴迎着风，旁边就是湛蓝的洱海，这种体验是大理独一份的！</div>
+            <div class="attr-meta"><span>📍 才村→S弯→廊桥→喜洲→双廊</span><span>🎫 免费（租车¥30-50/天）</span><span>⏰ 建议4-5小时</span></div>
+        </div>
+
+        <div class="attr-card">
+            <div class="attr-name">2. 苍山感通索道 <span class="attr-tag tag-nature">🌿 自然风光</span></div>
+            <div class="attr-reason">💡 乘索道登顶可俯瞰整个洱海和大理城，"登苍山、观洱海"是大理最经典的画面。4月的苍山绿意盎然，山顶空气清新，是远离喧嚣的绝佳去处。推荐走感通线（¥110），比洗马潭线便宜且省力。</div>
+            <div class="attr-meta"><span>🎫 ¥110（学生¥90）</span><span>⏰ 建议3-4h</span><span>⚠️ 山顶冷，带外套</span></div>
+        </div>
+
+        <div class="attr-card">
+            <div class="attr-name">3. 崇圣寺三塔 <span class="attr-tag tag-culture">🏛 人文历史</span></div>
+            <div class="attr-reason">💡 大理唯一的5A级景区，南诏大理国皇家寺庙。一大二小三座佛塔是大理的标志，三塔倒影池是拍出经典照片的最佳角度。了解白族佛教文化，感受大理国千年历史的厚重感。</div>
+            <div class="attr-meta"><span>🎫 ¥75（学生¥37）</span><span>⏰ 建议2h</span><span>📸 清晨/傍晚光线最佳</span></div>
+        </div>
+
+        <div class="attr-card">
+            <div class="attr-name">4. 大理古城 + 双廊古镇 + 喜洲古镇 <span class="attr-tag tag-leisure">☕ 休闲漫游</span></div>
+            <div class="attr-reason">💡 古城五华楼俯瞰全景，人民路文青小店多；双廊洱海边杨丽萍太阳宫超出片；喜洲白族"三坊一照壁"建筑独特、喜洲粑粑好吃！3个古镇各有特色，4月人不多，适合慢慢逛。</div>
+            <div class="attr-meta"><span>🎫 古城/双廊/喜洲均免费</span><span>⏰ 合计4-6h</span></div>
+        </div>
+
+        <div class="divider"></div>
+
+        <h3>⛰️ 丽江 · Lijiang（建议2天）</h3>
+        <p style="color:#888;font-size:0.85em;margin-bottom:14px;">🌤️ 4月气温 6~23°C | 🏔️ 海拔 2400m | ⚠️ 注意高原反应</p>
+
+        <div class="attr-card">
+            <div class="attr-name">1. 玉龙雪山 + 蓝月谷 <span class="attr-tag tag-hot">🔥 必去！一生必看</span></div>
+            <div class="attr-reason">💡 纳西族神山，4月积雪未化景色壮观！大索道直达4506m冰川公园，站在雪山之巅的感觉震撼人心。蓝月谷湖水碧绿如翡翠，被誉为"小九寨沟"，免费含在门票内。整个云南最值得花一天的地方！</div>
+            <div class="attr-meta"><span>🎫 进山¥100+大索道¥140（学生优惠）</span><span>⏰ 建议全天</span><span>⚠️ 提前3天小程序抢索道票！</span></div>
+        </div>
+
+        <div class="attr-card">
+            <div class="attr-name">2. 丽江古城（大研）<span class="attr-tag tag-culture">🏛 世界遗产</span></div>
+            <div class="attr-reason">💡 世界文化遗产，纳西族传统建筑群。早上6-7点逛四方街最安静，避开人流拍照。木府（¥40）了解纳西族历史，大水车是打卡地标。夜晚酒吧街氛围浓，但也比较吵，住宿建议选远离酒吧街的区域。</div>
+            <div class="attr-meta"><span>🎫 免费</span><span>⏰ 半天+晚上</span></div>
+        </div>
+
+        <div class="attr-card">
+            <div class="attr-name">3. 束河古镇 + 白沙古镇 <span class="attr-tag tag-leisure">🌿 小众文艺</span></div>
+            <div class="attr-reason">💡 比大研古城更安静、商业化程度低！束河是茶马古道重要驿站，有手工皮具、扎染体验；白沙古镇是纳西族发源地，白沙壁画有明代历史价值，还能远眺玉龙雪山全景。适合喜欢安静、深度体验的旅行者。</div>
+            <div class="attr-meta"><span>🎫 束河免费、白沙壁画¥30</span><span>⏰ 各2-3h</span><span>🐎 束河骑马¥180-280</span></div>
+        </div>
+
+        <div class="divider"></div>
+
+        <h3>🌴 西双版纳 · Xishuangbanna（建议2-3天）</h3>
+        <p style="color:#888;font-size:0.85em;margin-bottom:14px;">🌤️ 4月气温 18~35°C | 🌡️ 湿热蚊虫多 | 🏔️ 海拔 520m</p>
+
+        <div class="attr-card">
+            <div class="attr-name">1. 中科院热带植物园（勐仑）<span class="attr-tag tag-hot">🔥 强烈推荐</span></div>
+            <div class="attr-reason">💡 中国面积最大、物种最丰富的植物园，上万种热带植物！4月正值花期，各色花卉竞相绽放。西区有王莲池、棕榈园、奇花异草；东区是热带雨林徒步路线。超级出片，适合拍照、研学和亲子！</div>
+            <div class="attr-meta"><span>🎫 ¥80（学生¥50）+电瓶车¥50</span><span>⏰ 建议4-5h</span><span>🚗 距景洪55km，包车/一日游</span></div>
+        </div>
+
+        <div class="attr-card">
+            <div class="attr-name">2. 星光夜市（告庄西双景）<span class="attr-tag tag-free">🎉 免费·夜景必去</span></div>
+            <div class="attr-reason">💡 东南亚最大夜市之一！大金塔金碧辉煌，夜晚灯光璀璨超震撼。傣族烧烤、手抓饭、热带水果便宜又好吃。可以租傣族服装旅拍（¥50-200含妆造），夜景氛围感拉满。6-8点是拍照黄金时间！</div>
+            <div class="attr-meta"><span>🎫 免费</span><span>⏰ 傍晚-晚上</span><span>📸 建议19:00前到</span><span>💰 人均¥30-60吃撑</span></div>
+        </div>
+
+        <div class="attr-card">
+            <div class="attr-name">3. 野象谷 <span class="attr-tag tag-nature">🐘 动物爱好者必去</span></div>
+            <div class="attr-reason">💡 国内唯一可观测野生亚洲象的地方！雨林高空栈道漫步时有机会偶遇野象群（4月概率较高）。大象学校有可爱互动表演。雨林徒步体验很棒，空气清新。</div>
+            <div class="attr-meta"><span>🎫 ¥60（学生¥30）</span><span>⏰ 建议3h</span><span>🦚 雨林牧象¥150</span><span>⚠️ 带驱蚊液！</span></div>
+        </div>
+
+        <div class="attr-card">
+            <div class="attr-name">4. 原始森林公园 + 曼听公园 + 总佛寺 <span class="attr-tag tag-leisure">🌿 性价比之选</span></div>
+            <div class="attr-reason">💡 原始森林公园离市区最近（孔雀放飞百鸟齐飞壮观！¥45）；曼听公园是傣王御花园（1300年历史，¥40）；总佛寺与曼听公园相连（免费），金碧辉煌的南传佛教建筑。三个景点1天可走完。</div>
+            <div class="attr-meta"><span>🎫 合计约¥85</span><span>⏰ 合计约5-6h</span></div>
+        </div>
+
+        <div class="attr-card">
+            <div class="attr-name">5. 傣族园 <span class="attr-tag tag-culture">💦 泼水狂欢</span></div>
+            <div class="attr-reason">💡 5个原生态傣族村寨组成，每天14:00有大型泼水活动（4月是傣历新年附近，气氛超嗨！），可参与体验泼水节欢乐，深入傣家了解文化。</div>
+            <div class="attr-meta"><span>🎫 ¥50</span><span>⏰ 建议3h</span><span>💦 自带换洗衣物！</span></div>
+        </div>
+    </div>
+
+    <!-- ==================== 回程机票 ==================== -->
+    <div class="card card-red" id="flight">
+        <h2><span class="icon">💰</span> 回程机票方案对比</h2>
+            <div class="highlight-box hl-red">
+            <h4>🎯 结论：从西双版纳直飞合肥最省钱！</h4>
+            <p style="font-size:0.9em;">版纳→合肥 ¥784起（5人约¥3,920） | 昆明→合肥 ¥700起（5人约¥3,500） | 丽江→合肥 ¥900起（最贵）</p>
+        </div>
+        <table>
+            <thead>
+                <tr><th>出发地</th><th>到达</th><th>单程/人</th><th>5人总价</th><th>航班</th><th>推荐</th></tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>🌴 西双版纳（景洪）</td><td>合肥</td>
+                    <td class="price">¥784-1,520</td><td class="price">¥3,920-7,600</td>
+                    <td>约12班/周</td>
+                    <td><span class="recommend">✅ 首选</span></td>
+                </tr>
+                <tr>
+                    <td>🌆 昆明</td><td>合肥</td>
+                    <td class="price">¥700-1,200</td><td class="price">¥3,500-6,000</td>
+                    <td>约35班/周</td>
+                    <td>备选（需额外从版纳回昆明）</td>
+                </tr>
+                <tr>
+                    <td>⛰️ 丽江</td><td>合肥</td>
+                    <td class="price">¥900-1,500</td><td class="price">¥4,500-7,500</td>
+                    <td>约7班/周</td>
+                    <td>❌ 最贵，不推荐</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="tip-box tip-blue">
+            <h4>🛫 返程购票策略</h4>
+            <ul>
+                <li><strong>最优方案：</strong>4月27-28日从西双版纳直飞合肥，玩完直接走</li>
+                <li><strong>购票平台：</strong>天巡Skyscanner比价 → 携程/去哪儿下单 → 同程旅行学生认证再省20%</li>
+                <li><strong>提前买：</strong>4月20日前购买最划算，越临近五一越贵</li>
+                <li><strong>学生优惠：</strong>同程旅行APP认证学生身份，机票最高省20%</li>
+                <li><strong>备用方案：</strong>版纳→昆明（¥200-350）+ 昆明→合肥（¥300-500）= ¥500-850/人，中转但航班多</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- ==================== 费用预算 ==================== -->
+    <div class="card card-purple" id="budget">
+        <h2><span class="icon">💵</span> 费用预算（人均估算）</h2>
+        <div class="budget-grid">
+            <div>
+                <h3 style="border-left:4px solid #4caf50;padding-left:12px;margin-bottom:12px;">🚆 交通费用</h3>
+                <table>
+                    <tbody>
+                        <tr><td>合肥→昆明（次卡/高铁）</td><td class="price">¥0-550</td></tr>
+                        <tr><td>昆明→大理（高铁）</td><td class="price">¥145</td></tr>
+                        <tr><td>大理→丽江（城铁）</td><td class="price">¥80</td></tr>
+                        <tr><td>丽江→西双版纳（直飞）</td><td class="price">¥350-480</td></tr>
+                        <tr><td>西双版纳→合肥（回程）</td><td class="price">¥784-1,520</td></tr>
+                        <tr style="background:#e8f5e9;font-weight:700;"><td>交通合计</td><td class="price" style="color:#27ae60;">¥1,359-2,775</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div>
+                <h3 style="border-left:4px solid #ff9800;padding-left:12px;margin-bottom:12px;">🏠 住宿 + 门票 + 餐饮</h3>
+                <table>
+                    <tbody>
+                        <tr><td>住宿（7晚×人均¥80）</td><td class="price">¥560</td></tr>
+                        <tr><td>景点门票（学生价）</td><td class="price">¥300-500</td></tr>
+                        <tr><td>餐饮（8天×¥60/天）</td><td class="price">¥480</td></tr>
+                        <tr><td>市内交通</td><td class="price">¥200-300</td></tr>
+                        <tr><td>其他（购物/水果/应急）</td><td class="price">¥200-300</td></tr>
+                        <tr style="background:#e8f5e9;font-weight:700;"><td>其他合计</td><td class="price" style="color:#27ae60;">¥1,740-2,140</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="highlight-box hl-green" style="margin-top:20px;">
+            <h4>🎯 总预算估算（人均）</h4>
+            <p style="font-size:1.1em;"><strong>¥2,999 - ¥4,600 / 人</strong></p>
+            <p style="font-size:0.85em;margin-top:4px;">5人合计：¥14,995 - ¥23,000 | 人多平摊更划算！学生优惠可再省10-20%</p>
+        </div>
+    </div>
+
+    <!-- ==================== 出行注意事项 ==================== -->
+    <div class="card card-orange" id="tips">
+        <h2><span class="icon">⚠️</span> 出行注意事项（必读！）</h2>
+
+        <div class="tip-box tip-warn">
+            <h4>🌤️ 天气与穿衣</h4>
+            <ul>
+                <li><strong>大理（4月）：</strong>8~25°C，早晚温差大（15℃+），<strong>必带薄羽绒服/冲锋衣</strong>！白天可穿长袖+外套，紫外线强必须防晒（SPF50+）</li>
+                <li><strong>丽江（4月）：</strong>6~23°C，早晚更冷，晴天白天舒服。<strong>玉龙雪山顶-5~5℃</strong>，羽绒服必带（古城可租¥50/件）</li>
+                <li><strong>西双版纳（4月）：</strong>18~35°C，直接夏天！短袖+防晒衣+遮阳帽。<strong>蚊虫多</strong>，驱蚊液必带！偶有阵雨带伞</li>
+                <li><strong>穿衣策略：</strong>洋葱式穿搭！大理丽江穿冬装，到版纳换夏装</li>
+            </ul>
+        </div>
+
+        <div class="tip-box tip-safe">
+            <h4>🚗 租车注意事项（大理环洱海等）</h4>
+            <ul>
+                <li><strong>首选正规平台：</strong>一嗨租车、神州租车等大型连锁（不要路边小摊！）<strong>保险务必购买</strong>（¥50-200/天，千万别省）</li>
+                <li><strong>租车费用：</strong>经济型轿车¥80-150/天，电动车（环洱海）¥30-50/天，包车环洱海¥200-300/天</li>
+                <li><strong>环洱海路线：</strong>建议顺时针（大理古城→双廊→海东），副驾驶靠海拍照更佳！环海约130km，电动车可跑西线精华段60km</li>
+                <li><strong>山路注意：</strong>云南多山路，弯道多，<strong>不超速、不占道</strong>。雨后路滑减速慢行</li>
+                <li><strong>取还车检查：</strong>务必绕车一圈拍照/录像，记录已有划痕！还车前加满油</li>
+                <li><strong>电动车注意：</strong>环洱海电动车续航约80-100km，注意电量！别骑太远没电推车…</li>
+            </ul>
+        </div>
+
+        <div class="tip-box tip-purple">
+            <h4>🏔️ 高反预防（丽江/苍山/玉龙雪山）</h4>
+            <ul>
+                <li><strong>提前准备：</strong>出发前3天开始喝红景天或吃高原安（药店¥20-40/盒）</li>
+                <li><strong>上山当天：</strong>到丽江当天不要洗澡、不要剧烈运动、不要喝酒！<strong>多喝热水</strong></li>
+                <li><strong>玉龙雪山：</strong>买氧气瓶（景区¥15/瓶，古城¥10/瓶），感觉不适就吸氧，量力而行</li>
+            </ul>
+        </div>
+
+        <div class="tip-box tip-green">
+            <h4>🔒 安全注意事项</h4>
+            <ul>
+                <li><strong>财物安全：</strong>古城人多有扒手，手机钱包放前兜/背包前背。贵重物品放酒店保险箱</li>
+                <li><strong>景区陷阱：</strong>警惕"低价一日游"（可能含购物点），玉龙雪山票只从官方小程序买！</li>
+                <li><strong>拍照收费：</strong>古城穿民族服装拍照前问清价格，傣装旅拍提前谈好价格和底片数量</li>
+                <li><strong>紧急电话：</strong>报警110 | 急救120 | 旅游投诉12345</li>
+            </ul>
+        </div>
+
+        <div class="tip-box tip-blue">
+            <h4>📋 行前准备清单</h4>
+            <ul>
+                <li><strong>证件：</strong>身份证、学生证（门票打折必备！）</li>
+                <li><strong>衣物：</strong>薄羽绒服/冲锋衣、防晒衣、短袖×3、长裤×2、运动鞋、拖鞋、帽子</li>
+                <li><strong>防晒：</strong>SPF50+防晒霜、墨镜、遮阳帽（云南紫外线全国前三强！）</li>
+                <li><strong>药品：</strong>红景天/高原安、晕车药、创可贴、驱蚊液、肠胃药</li>
+                <li><strong>电子：</strong>充电宝（古城找充电的地方少！）、充电器</li>
+            </ul>
+        </div>
+
+        <div class="tip-box tip-warn">
+            <h4>💡 省钱小技巧（学生党必备）</h4>
+            <ul>
+                <li><strong>学生证：</strong>几乎所有景点都有学生票，折扣5-7折，<strong>务必带上！</strong></li>
+                <li><strong>同程旅行：</strong>认证学生身份，机票最高省20%，搜索「捡漏特价」「机票100」</li>
+                <li><strong>住宿：</strong>5人合住民宿套房，比5间酒店便宜50%+</li>
+                <li><strong>吃饭：</strong>避开古城景区内餐厅，走远一点本地人吃饭的地方便宜又好吃</li>
+                <li><strong>交通：</strong>大理→丽江选城铁C字头，比大巴便宜且准时；丽江→版纳选早班机最便宜</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- ==================== 攻略链接 ==================== -->
+    <div class="card card-purple" id="links">
+        <h2><span class="icon">🔗</span> 攻略链接（可点击查阅）</h2>
+        <p style="color:#888;font-size:0.88em;margin-bottom:18px;">以下是整理的相关攻略来源，方便你进一步查阅详细内容：</p>
+
+        <h3>📍 综合路线规划</h3>
+        <div class="link-grid">
+            <a href="https://www.yunnanplay.com/post/%e4%ba%91%e5%8d%97%e6%97%85%e6%b8%b8%e6%80%8e%e4%b9%88%e7%8e%a9%e4%b8%8d%e7%bb%95%e8%b7%af%ef%bd%9c%e6%98%86%e6%98%8e%e5%a4%a7%e7%90%86%e4%b8%bd%e6%b1%9f%e8%a5%bf%e5%8f%8c%e7%89%88%e7%ba%b3%e8%a1%8c/" target="_blank" class="link-card lc-blue">🗺️ 云南四地路线规划（最新）</a>
+            <a href="https://www.163.com/dy/article/KP3O6M9L0556JH6C.html" target="_blank" class="link-card lc-red">📅 云南7天6晚详细行程表</a>
+            <a href="https://www.bijingdi.com/gonglue/1161.html" target="_blank" class="link-card lc-green">🚗 云南自驾游路线全攻略</a>
+            <a href="https://www.danglv.com/gonglue/20250211/19236.html" target="_blank" class="link-card lc-orange">📝 全网最全云南攻略+避坑指南</a>
+        </div>
+
+        <h3 style="margin-top:20px;">🌊 大理攻略</h3>
+        <div class="link-grid">
+            <a href="https://www.163.com/dy/article/KHHMON070556GMMA.html" target="_blank" class="link-card lc-blue">🏞️ 大理十大必去景点（2026）</a>
+            <a href="https://www.sohu.com/a/886493873_121893286" target="_blank" class="link-card lc-green">🌸 大理全攻略：苍山洱海到古城</a>
+            <a href="https://cj.sina.com.cn/articles/view/7879922979/1d5ae152301901pywg" target="_blank" class="link-card lc-orange">🚗 环洱海自驾保姆级避坑指南</a>
+            <a href="https://www.yoojia.com/dongtai/6025715002" target="_blank" class="link-card lc-purple">🚗 大理租车攻略+洱海自驾贴士</a>
+        </div>
+
+        <h3 style="margin-top:20px;">⛰️ 丽江攻略</h3>
+        <div class="link-grid">
+            <a href="https://k.sina.cn/article_7879922979_1d5ae152301901q6c6.html" target="_blank" class="link-card lc-red">🏔️ 玉龙雪山抢票+避坑攻略</a>
+            <a href="https://www.163.com/dy/article/KOVTCPEF0556JH6C.html" target="_blank" class="link-card lc-orange">🗓️ 丽江7日深度游攻略</a>
+            <a href="https://www.sohu.com/a/947761627_121956424" target="_blank" class="link-card lc-green">🌿 丽江旅游攻略：玉龙雪山与蓝月谷</a>
+        </div>
+
+        <h3 style="margin-top:20px;">🌴 西双版纳攻略</h3>
+        <div class="link-grid">
+            <a href="https://www.163.com/dy/article/KOLKL2V90556KEPD.html" target="_blank" class="link-card lc-pink">🎯 西双版纳TOP10景点+避坑攻略</a>
+            <a href="https://www.163.com/dy/article/K171AFB305568ZGD.html" target="_blank" class="link-card lc-orange">🗓️ 西双版纳5日最佳路线</a>
+            <a href="https://www.sohu.com/a/956390257_120932760" target="_blank" class="link-card lc-green">🌿 西双版纳野象谷+植物园攻略</a>
+        </div>
+
+        <h3 style="margin-top:20px;">✈️ 机票比价</h3>
+        <div class="link-grid">
+            <a href="https://www.tianxun.com/routes/jhg/hfe/xishuangbanna-gasa-to-hefei.html" target="_blank" class="link-card lc-red">🔍 天巡：版纳→合肥机票</a>
+            <a href="https://www.tianxun.com/routes/kmg/hfe/kunming-to-hefei.html" target="_blank" class="link-card lc-blue">🔍 天巡：昆明→合肥机票</a>
+            <a href="https://flights.ctrip.com/booking/JHG-HFE-day-1.html" target="_blank" class="link-card lc-orange">✈️ 携程：版纳→合肥</a>
+            <a href="https://flights.ctrip.com/booking/LJG-HFE-day-1.html" target="_blank" class="link-card lc-purple">✈️ 携程：丽江→合肥</a>
+        </div>
+
+        <h3 style="margin-top:20px;">🚄 高铁预订</h3>
+        <div class="link-grid">
+            <a href="https://www.12306.cn/index/" target="_blank" class="link-card lc-green">🚄 12306官网（高铁订票）</a>
+            <a href="https://flights.ctrip.com/booking/HFE-KMG-day-1.html" target="_blank" class="link-card lc-blue">✈️ 携程：合肥→昆明机票</a>
+        </div>
+
+        <div class="tip-box tip-blue" style="margin-top:20px;">
+            <h4>📱 小红书使用建议</h4>
+            <ul>
+                <li>在<strong>小红书APP</strong>内搜索以下关键词，获取最新真实攻略：</li>
+                <li>🔍 搜索「<strong>云南旅游攻略</strong>」→ 获取综合路线规划</li>
+                <li>🔍 搜索「<strong>大理洱海环湖</strong>」→ 获取最新骑行路线和打卡点</li>
+                <li>🔍 搜索「<strong>玉龙雪山抢票</strong>」→ 获取大索道抢票技巧</li>
+                <li>🔍 搜索「<strong>西双版纳必坑</strong>」→ 了解近期避坑信息</li>
+                <li>🔍 搜索「<strong>云南租车</strong>」→ 获取最新租车价格和避坑</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 页脚装饰 -->
+    <div style="text-align:center;padding:30px 20px 20px;color:rgba(255,255,255,0.55);font-size:0.85em;position:relative;z-index:1;">
+        <div style="font-size:1.6em;margin-bottom:10px;letter-spacing:8px;">🌴 🌺 🌿 🏔️ 🌊 ☀️</div>
+        <p>云南7-9天深度游 · 5人学生团 · 2026年4月20日出发</p>
+        <p style="margin-top:6px;">从洱海的风到版纳的雨，这场青春值得被记住 🌈</p>
+    </div>
+
+</div>
 </body>
 </html>
